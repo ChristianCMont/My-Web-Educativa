@@ -1,43 +1,77 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
-// Importación de imágenes para usar en el componente
+// Importación de imágenes
 import bg from '../images/bg.png';
-import lap from '../images/lap.gif';
-
-// Importación de componentes y utilidades de react-router-dom
-import { Link } from 'react-router-dom';
 
 
 const Contact = () => {
-return (
- <header class="header">
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
-      <img src={bg} className="bg" alt="" />
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+  };
 
-      <div class="header-content container">
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aquí podrías agregar la lógica para enviar el formulario
+    console.log('Formulario enviado:', formData);
+  };
 
-        <div class="header-txt" >
-          <h1><span>¡contact</span> y sera tu camino al éxito!
-          </h1>
-          <p>
-            Descubre una nueva forma de aprender con nuestros cursos interactivos en vivo. Disfruta de una experiencia educativa única desde la comodidad de tu hogar. ¡No te pierdas esta oportunidad de crecer y desarrollar nuevas habilidades con la guía de expertos en tiempo real!
-
-          </p>
-
-          <Link to="/About" className="btn-1">WebClass</Link>
-
+  return (
+    <header id="contact-header" className="header">
+      <img src={bg} className="bg" alt="Background" />
+      <div className="header-content container">
+        <div className="header-txt">
+          <h1 className="text-center">Contáctanos</h1>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label htmlFor="name" className="form-label">Nombre</label>
+              <input
+                type="text"
+                className="form-control"
+                id="name"
+                placeholder="Tu nombre"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label">Correo Electrónico</label>
+              <input
+                type="email"
+                className="form-control"
+                id="email"
+                placeholder="nombre@ejemplo.com"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="message" className="form-label">Mensaje</label>
+              <textarea
+                className="form-control"
+                id="message"
+                rows="3"
+                placeholder="Tu mensaje"
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            <button type="submit" className="btn btn-primary">Enviar</button>
+          </form>
         </div>
-
-        <div class="header-img">
-          <img src={lap} className="lap" alt="" />
-        </div>
-
       </div>
     </header>
+  );
+};
 
-
-
-);
-}
 export default Contact;

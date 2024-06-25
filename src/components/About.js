@@ -28,9 +28,7 @@ const About = () => {
 
           </div>
 
-          <div class="header-img">
-            <img src={lap} className="lap" alt="" />
-          </div>
+        
 
 
           <div class="header-txt">

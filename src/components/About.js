@@ -32,8 +32,9 @@ const About = () => {
 
 
           <div class="header-txt">
-        <h1>About Page</h1>
-        <ul>
+           
+        <h1 className="text-center">About Page</h1>
+        <ul className="text-center">
           <li><Link to={`${match.url}/team`}>Our Team</Link></li>
           <li><Link to={`${match.url}/history`}>Our History</Link></li>
         </ul>

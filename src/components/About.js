@@ -18,11 +18,10 @@ const About = () => {
         <div class="header-content container">
 
           <div class="header-txt" >
-            <h1><span>Abaut</span> sobre nosotros
+            <h1><span>Sobre</span> Nosotros
             </h1>
             <p>
-              Descubre una nueva forma de aprender con nuestros cursos interactivos en vivo. Disfruta de una experiencia educativa única desde la comodidad de tu hogar. ¡No te pierdas esta oportunidad de crecer y desarrollar nuevas habilidades con la guía de expertos en tiempo real!
-
+            ¡Bienvenido a una nueva era de aprendizaje! En nuestros cursos interactivos en vivo, descubrirás una manera innovadora de adquirir conocimientos y habilidades desde la comodidad de tu hogar. Disfruta de una experiencia educativa sin igual, donde expertos te guiarán en tiempo real para asegurar tu éxito. ¡Únete a nosotros y transforma tu futuro hoy mismo!
             </p>
 
             <Link to="/" className="btn-1">Inicio</Link>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link, useMatch, useResolvedPath, Routes } from 'react-router-dom';
 import bg from '../images/bg.png';
-import lap from '../images/lap.gif';
+
 
 const About = () => {
   let resolvedPath = useResolvedPath("");
